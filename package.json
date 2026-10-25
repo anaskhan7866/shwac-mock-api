@@ -1,0 +1,9 @@
+{
+  "name": "shwac-mock-api",
+  "version": "1.0.0",
+  "description": "Mock API for SHWAC customer and technician mobile apps",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js"
+  }
+}
