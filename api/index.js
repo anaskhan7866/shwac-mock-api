@@ -189,7 +189,7 @@ let techJobs = [
     scheduled_date: '2026-10-25',
     time_slot: '12:00 PM - 03:00 PM',
     distance_km: 2.4,
-    customer: { id: 1, name: 'Anas Khan', phone: '9876543210' },
+    customer: { id: 1, name: 'Demo Customer', phone: '9876543210' },
     address: {
       line1: 'Flat 402, Royal Palms, Civil Lines',
       city: 'Jaipur',
@@ -249,7 +249,7 @@ async function handler(req, res) {
 
   if (pathname === '/api/v1/auth/otp/verify' && method === 'POST') {
     const phone = body.phone || '9876543210';
-    const name = body.name || 'Anas Khan';
+    const name = body.name || 'Demo Customer';
     return json({
       token: 'shwac_demo_token_123456',
       user: {
@@ -279,7 +279,7 @@ async function handler(req, res) {
   if (pathname === '/api/v1/auth/me' && method === 'GET') {
     return json({
       id: 1,
-      name: 'Anas Khan',
+      name: 'Demo Customer',
       phone: '9876543210',
       user_type: 'customer',
       customer_id: 1
@@ -310,9 +310,9 @@ async function handler(req, res) {
     if (method === 'GET') {
       return json({
         id: 1,
-        name: 'Anas Khan',
+        name: 'Demo Customer',
         phone: '9876543210',
-        email: 'anas@shwacindia.com',
+        email: 'customer@shwacindia.com',
         whatsapp_opt_in: true,
         products: products,
         addresses: addresses
